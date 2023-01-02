@@ -1,0 +1,17 @@
+server:
+  port: 5001
+  servlet:
+    context-path: /api
+  jetty:
+    accesslog:
+      enabled: true
+spring:
+  datasource:
+    url: jdbc:mysql://sh-cynosdbmysql-grp-46yqs6t0.sql.tencentcdb.com:20037/billing-db?useUnicode=true&characterEncoding=utf8&useSSL=false&&allowMultiQueries=true&&allowPublicKeyRetrieval=true&&serverTimezone=UTC
+    username: root
+    password: .!C4ZjyRK9dzteC
+  jackson:
+    default-property-inclusion: NON_EMPTY
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(---){faint} %clr([%t]){faint} %clr(%-50.50logger{49}){cyan} %clr([line: %line]){yellow} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
